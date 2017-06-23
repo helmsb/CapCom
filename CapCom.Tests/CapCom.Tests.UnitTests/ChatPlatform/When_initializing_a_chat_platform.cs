@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace CapCom.Tests.UnitTests
+namespace CapCom.Tests.UnitTests.ChatPlatform
 {
     public class When_initializing_a_chat_platform
     {
