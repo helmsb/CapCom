@@ -16,7 +16,8 @@ interface IChatProvider
     string Description {get; set;}
 
     /// <summary>
-    /// The name of the icon you would like to show in the administration panel. Note this must be placed in the "images" directory of your extension. 
+    /// The name of the icon you would like to show in the administration panel. Note this must be placed in the "images" 
+    /// directory of your extension. 
     /// </summary>
     /// <returns>String</returns>
     string IconName { get; set; }
@@ -33,6 +34,18 @@ interface IChatProvider
     /// <returns>Bool</returns>
     bool IsSupportedChatPlatformVersion();
 
+    /// <summary>
+    /// This is called whenever your chat platform provider is first invoked. Return a bool indicating whether or not you are
+    /// successful.
+    /// </summary>
+    /// <returns>Bool based on initialization success</returns>
+    bool InitalizeChatPlatform();
 
+    /// <summary>
+    /// Used to post messages to the chat provider. It returns a bool to let the system know if it was successful
+    /// </summary>
+    /// <param name="chatPost"></param>
+    /// <returns>bool</returns>
+    bool PostNewMessage(IChatPost chatPost);
 
 }
