@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CapCom.ChatFramwork.Domain
+namespace CapCom.ChatPlatform.Domain
 {
     public class Class1
     {
